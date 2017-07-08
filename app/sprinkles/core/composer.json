@@ -12,6 +12,12 @@
         }
     ],
     "version": "4.0",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/userfrosting/assets"
+        }
+    ],
     "require": {
         "illuminate/cache": "^5.3",
         "illuminate/database": "^5.3",
@@ -27,12 +33,12 @@
         "slim/twig-view": "^1.2",
         "symfony/http-foundation": "*",
         "twig/twig": "^1.18",
-        "userfrosting/assets": "~4.0.0",
+        "userfrosting/assets": "dev-feature-modularisation-overhaul",
         "userfrosting/config": "~4.0.0",
         "userfrosting/fortress": "~4.0.0",
         "userfrosting/i18n": "~4.0.1",
         "userfrosting/session": "~4.0.0",
-        "userfrosting/support": "~4.0.0",
+        "userfrosting/support": "^4.0.0",
         "vlucas/phpdotenv": "^2"
     },
     "minimum-stability": "dev",

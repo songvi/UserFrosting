@@ -33,10 +33,9 @@ use Slim\Views\Twig;
 use Slim\Views\TwigExtension;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\NullSessionHandler;
 use UserFrosting\Assets\AssetBundleSchema;
-use UserFrosting\Assets\AssetLoader;
-use UserFrosting\Assets\AssetManager;
-use UserFrosting\Assets\UrlBuilder\AssetUrlBuilder;
-use UserFrosting\Assets\UrlBuilder\CompiledAssetUrlBuilder;
+use UserFrosting\Assets\Assets;
+use UserFrosting\Assets\AssetBundles\GulpBundleAssetsCompiledBundles as CompiledAssetBundles;
+use UserFrosting\Assets\AssetBundles\GulpBundleAssetsRawBundles as RawAssetBundles;
 use UserFrosting\I18n\MessageTranslator;
 use UserFrosting\Session\Session;
 use UserFrosting\Sprinkle\Core\Twig\CoreExtension;
@@ -77,20 +76,6 @@ class CoreServicesProvider
         };
 
         /**
-         * Asset loader service.
-         *
-         * Loads assets from a specified relative location.
-         * Assets are Javascript, CSS, image, and other files used by your site.
-         */
-        $container['assetLoader'] = function ($c) {
-            $basePath = \UserFrosting\APP_DIR . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME;
-            $pattern = "/^[A-Za-z0-9_\-]+\/assets\//";
-
-            $al = new AssetLoader($basePath, $pattern);
-            return $al;
-        };
-
-        /**
          * Asset manager service.
          *
          * Loads raw or compiled asset information from your bundle.config.json schema file.
@@ -100,34 +85,42 @@ class CoreServicesProvider
             $config = $c->config;
             $locator = $c->locator;
 
+            $assets;
+
             // Load asset schema
             if ($config['assets.use_raw']) {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.raw.path'];
-                $removePrefix = \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME;
-                $aub = new AssetUrlBuilder($locator, $baseUrl, $removePrefix, 'assets');
 
-                $as = new AssetBundleSchema($aub);
-                $as->loadRawSchemaFile($locator->findResource("sprinkles://core/" . $config['assets.raw.schema'], true, true));
+                $sprinkles = ['core'] + $c->sprinkleManager->getSprinkles();
+                $streamPrefixTrans = [
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME => 'vendor'
+                ];
+                foreach ($sprinkles as $sprinkle) {
+                    $streamPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = '';
+                }
+                $urlPrefixTrans = [
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME => '',
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME     => 'vendor'
+                ];
+                $assets = new Assets($locator, 'assets', $baseUrl, 'app', $streamPrefixTrans, $urlPrefixTrans);
 
-                // Extend for loaded sprinkles
-                $sprinkles = $c->sprinkleManager->getSprinkles();
+                // Load raw asset bundles for each Sprinkle.
+                $sprinkles = ['core'] + $c->sprinkleManager->getSprinkles();
                 foreach ($sprinkles as $sprinkle) {
                     $resource = $locator->findResource("sprinkles://$sprinkle/" . $config['assets.raw.schema'], true, true);
                     if (file_exists($resource)) {
-                        $as->loadRawSchemaFile($resource);
+                        $assets->addAssetBundles(new RawAssetBundles($resource));
                     }
                 }
             } else {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.compiled.path'];
-                $aub = new CompiledAssetUrlBuilder($baseUrl);
+                $assets = new Assets($locator, 'assets', $baseUrl, $locator->getBase());
 
-                $as = new AssetBundleSchema($aub);
-                $as->loadCompiledSchemaFile($locator->findResource("build://" . $config['assets.compiled.schema'], true, true));
+                // Load compiled asset bundle.
+                $assets->addAssetBundles(new CompiledAssetBundles("build://" . $config['assets.compiled.schema'], true, true));
             }
 
-            $am = new AssetManager($aub, $as);
-
-            return $am;
+            return $assets;
         };
 
         /**

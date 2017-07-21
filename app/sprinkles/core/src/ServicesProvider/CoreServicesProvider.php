@@ -116,10 +116,10 @@ class CoreServicesProvider
                 }
             } else {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.compiled.path'];
-                $assets = new Assets($locator, 'assets', $baseUrl, $locator->getBase());
+                $assets = new Assets($locator, 'assets', $baseUrl, 'app/public/assets');
 
                 // Load compiled asset bundle.
-                $assets->addAssetBundles(new CompiledAssetBundles("build://" . $config['assets.compiled.schema'], true, true));
+                $assets->addAssetBundles(new CompiledAssetBundles($locator("build://" . $config['assets.compiled.schema'], true, true)));
             }
 
             return $assets;
@@ -380,8 +380,16 @@ class CoreServicesProvider
             $locator->addPath('cache', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\CACHE_DIR_NAME);
             $locator->addPath('session', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\SESSION_DIR_NAME);
             $locator->addPath('sprinkles', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\SPRINKLES_DIR_NAME);
+
+            // Redo 'assets' schema so that vendor assets go last, and public first.
+            $paths = $locator->getPaths('assets');
+            $locator->resetScheme('assets');
             $locator->addPath('assets', 'vendor', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME . '/' . 'bower_components');
             $locator->addPath('assets', 'vendor', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME . '/' . 'node_modules');
+            foreach ($paths as $path) {
+                $locator->addPath('assets', '', $path);
+            }
+            $locator->addPath('assets', '', \UserFrosting\PUBLIC_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME);
 
             // Use locator to initialize streams
             ReadOnlyStream::setLocator($locator);

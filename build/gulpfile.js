@@ -70,7 +70,7 @@ gulp.task('assets-install', () => {
     }).stdout);
     console.log("Done.");
     console.log("Installing bower assets...");
-    execa.shellSync("bower install", {
+    execa.shellSync("bower install --allow-root", {
         cwd: "../app/assets",
         preferLocal: true,
         localDir: "./node_modules/.bin",

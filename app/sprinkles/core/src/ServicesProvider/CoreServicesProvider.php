@@ -93,14 +93,16 @@ class CoreServicesProvider
 
                 $sprinkles = ['core'] + $c->sprinkleManager->getSprinkles();
                 $streamPrefixTrans = [
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME => 'vendor'
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'bower_components' => 'vendor',
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'node_modules' => 'vendor'
                 ];
                 foreach ($sprinkles as $sprinkle) {
                     $streamPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = '';
                 }
                 $urlPrefixTrans = [
                     \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME => '',
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME     => 'vendor'
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'bower_components' => 'vendor-bower',
+                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'node_modules' => 'vendor-npm'
                 ];
                 $assets = new Assets($locator, 'assets', $baseUrl, 'app', $streamPrefixTrans, $urlPrefixTrans);
 
@@ -378,6 +380,8 @@ class CoreServicesProvider
             $locator->addPath('cache', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\CACHE_DIR_NAME);
             $locator->addPath('session', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\SESSION_DIR_NAME);
             $locator->addPath('sprinkles', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\SPRINKLES_DIR_NAME);
+            $locator->addPath('assets', 'vendor', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME . '/' . 'bower_components');
+            $locator->addPath('assets', 'vendor', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME . '/' . 'node_modules');
 
             // Use locator to initialize streams
             ReadOnlyStream::setLocator($locator);

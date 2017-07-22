@@ -230,6 +230,12 @@ class CoreServicesProvider
                 date_default_timezone_set($config['timezone']);
             }
 
+            // Reset 'assets' scheme in locator if specified in config. (must be done here thanks to prevent circular dependency)
+            if (!$config['assets.use_raw']) {
+                $c->locator->resetScheme('assets');
+                $c->locator->addPath('assets', '', \UserFrosting\PUBLIC_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME);
+            }
+
             return $config;
         };
 
@@ -380,16 +386,10 @@ class CoreServicesProvider
             $locator->addPath('cache', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\CACHE_DIR_NAME);
             $locator->addPath('session', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\SESSION_DIR_NAME);
             $locator->addPath('sprinkles', '', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\SPRINKLES_DIR_NAME);
-
-            // Redo 'assets' schema so that vendor assets go last, and public first.
-            $paths = $locator->getPaths('assets');
-            $locator->resetScheme('assets');
             $locator->addPath('assets', 'vendor', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME . '/' . 'bower_components');
             $locator->addPath('assets', 'vendor', \UserFrosting\APP_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME . '/' . 'node_modules');
-            foreach ($paths as $path) {
-                $locator->addPath('assets', '', $path);
-            }
-            $locator->addPath('assets', '', \UserFrosting\PUBLIC_DIR_NAME . '/' . \UserFrosting\ASSET_DIR_NAME);
+
+            // NOTE: 'assets://' scheme is reset to point to 'public/assets/' when application is in production mode. This occurs within the config service.
 
             // Use locator to initialize streams
             ReadOnlyStream::setLocator($locator);

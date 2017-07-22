@@ -56,13 +56,13 @@ gulp.task('assets-install', () => {
     }
 
     // Generate packages
-    mergePkg.npm(yarnTemplate, yarnPaths, '../app/assets/', true);
+    mergePkg.yarn(yarnTemplate, yarnPaths, '../app/assets/', true);
     mergePkg.bower(bowerTemplate, bowerPaths, '../app/assets/', true);
 
     // Run package managers
     let execa = require("execa");
     console.log("Installing npm assets...");
-    console.log(execa.shellSync("yarn install --flat", {
+    console.log(execa.shellSync("yarn install --flat --no-lockfile", {
         cwd: "../app/assets",
         preferLocal: true,
         localDir: "./node_modules/.bin",

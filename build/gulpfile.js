@@ -24,6 +24,7 @@ const bundleConfigFile = `./${bundleFile}`;
 
 /**
  * Vendor asset task
+ * @todo Use UF_MODE to determine verbosity level.
  */
 gulp.task('assets-install', () => {
     "use strict";
@@ -31,10 +32,20 @@ gulp.task('assets-install', () => {
     let mergePkg = require("merge-package-dependencies");
 
     // Generate package files
-    let yarnTemplate = {
+    let yarnTemplate = {// May seem overboard, but it seems the terminal clean when logging is enabled.
         name: "uf-vendor-assets",
+        description: "Auto-generated assets dependency package for project.",
+        author: [],
+        contributors: [],
         version: "1.0.0",
-        flat: true
+        keywords: [],
+        repository: "https://github.com/userfrosting/UserFrosting.git",
+        flat: true,
+        bugs: "https://github.com/userfrosting/UserFrosting/issues",
+        license: "UNLICENSED",
+        homepage: "https://www.userfrosting.com/",
+        dependencies: {},
+        engines: {}
     };
     let bowerTemplate = {
         name: "uf-vendor-assets"
@@ -62,13 +73,13 @@ gulp.task('assets-install', () => {
     // Run package managers
     let execa = require("execa");
     console.log("Installing npm assets...");
-    console.log(execa.shellSync("yarn install --flat --no-lockfile", {
+    execa.shellSync("yarn install --flat --no-lockfile", {
         cwd: "../app/assets",
         preferLocal: true,
         localDir: "./node_modules/.bin",
         stdio: "inherit"
-    }).stdout);
-    console.log("Done.");
+    });
+    // Yarn is able to output its completion. Bower... not so much.
     console.log("Installing bower assets...");
     execa.shellSync("bower install --allow-root", {
         cwd: "../app/assets",

@@ -1,6 +1,22 @@
 {
   "name": "core-assets",
+  "description": "Frontend vendor assets for 'core' sprinkle.",
   "version": "1.0.0",
+  "keywords": [],
+  "homepage": "https://www.userfrosting.com/",
+  "bugs": "https://github.com/userfrosting/UserFrosting/issues",
+  "repository": "https://github.com/userfrosting/UserFrosting.git",
+  "license": "MIT",
+  "author": {
+    "name": "Alexander Weissman",
+    "url": "https://alexanderweissman.com"
+  },
+  "contributors": [
+    "Louis Charette",
+    "Jordan Mele",
+    "Mike Jacobs",
+    "Srinivas Nukala"
+  ],
   "dependencies": {
     "bootstrap": "^3.3.6",
     "clipboard": "^1.5.16",
@@ -23,5 +39,6 @@
   },
   "resolutions": {
     "optimist": "0.6.1"
-  }
+  },
+  "engines": {}
 }

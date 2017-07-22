@@ -26,70 +26,83 @@ const bundleConfigFile = `./${bundleFile}`;
  * Vendor asset task
  * @todo Use UF_MODE to determine verbosity level.
  */
-gulp.task('assets-install', () => {
+gulp.task('assets-install', [ 'assets-clean' ], () => {
     "use strict";
 
     let mergePkg = require("merge-package-dependencies");
 
-    // Generate package files
-    let yarnTemplate = {// May seem overboard, but it seems the terminal clean when logging is enabled.
-        name: "uf-vendor-assets",
-        description: "Auto-generated assets dependency package for project.",
-        author: [],
-        contributors: [],
-        version: "1.0.0",
-        keywords: [],
-        repository: "https://github.com/userfrosting/UserFrosting.git",
-        flat: true,
-        bugs: "https://github.com/userfrosting/UserFrosting/issues",
-        license: "UNLICENSED",
-        homepage: "https://www.userfrosting.com/",
-        dependencies: {},
-        engines: {}
-    };
-    let bowerTemplate = {
-        name: "uf-vendor-assets"
-    };
-
-    // Collect package paths.
+    // See if there are any yarn packages.
     let yarnPaths = [];
-    let bowerPaths = [];
     for (let sprinkle of sprinkles) {
-        // npm/yarn
         if (fs.existsSync(`../app/sprinkles/${sprinkle}/package.json`)) {
             yarnPaths.push(`../app/sprinkles/${sprinkle}/package.json`);
         }
+    }
+    if (yarnPaths.length > 0) {
+        // Yes there are!
+
+        // Generate package.json
+        let yarnTemplate = {// May seem overboard, but it seems the terminal clean when logging is enabled.
+            name: "uf-vendor-assets",
+            description: "Auto-generated assets dependency package for project.",
+            author: [],
+            contributors: [],
+            version: "1.0.0",
+            keywords: [],
+            repository: "https://github.com/userfrosting/UserFrosting.git",
+            flat: true,
+            bugs: "https://github.com/userfrosting/UserFrosting/issues",
+            license: "UNLICENSED",
+            homepage: "https://www.userfrosting.com/",
+            dependencies: {},
+            engines: {}
+        };
+        console.log("\nMerging packages...\n");
+        mergePkg.yarn(yarnTemplate, yarnPaths, '../app/assets/', true);
+        console.log("\nMerge complete.\n");
+
+        // Perform installation.
+        console.log("Installing npm/yarn assets...");
+        let execa = require("execa");
+        execa.shellSync("yarn install --flat --no-lockfile", {
+            cwd: "../app/assets",
+            preferLocal: true,
+            localDir: "./node_modules/.bin",
+            stdio: "inherit"
+        });
+    }
+
+    // See if there are any bower packages.
+    let bowerPaths = [];
+    for (let sprinkle of sprinkles) {
         // bower
         if (fs.existsSync(`../app/sprinkles/${sprinkle}/bower.json`)) {
-            console.warn(`DEPRECATED: Detected bower.json in ${sprinkle} Sprinkle. Support for bower will be removed in the future, please use NPM instead.`);
+            console.warn(`DEPRECATED: Detected bower.json in ${sprinkle} Sprinkle. Support for bower (bower.json) will be removed in the future, please use npm/yarn (package.json) instead.`);
             bowerPaths.push(`../app/sprinkles/${sprinkle}/bower.json`);
         }
     }
+    if (bowerPaths.length > 0) {
+        // Yes there are!
 
-    // Generate packages
-    console.log("\nMerging packages...\n")
-    mergePkg.yarn(yarnTemplate, yarnPaths, '../app/assets/', true);
-    mergePkg.bower(bowerTemplate, bowerPaths, '../app/assets/', true);
-    console.log("\nMerge complete.\n")
+        // Generate bower.json
+        let bowerTemplate = {
+            name: "uf-vendor-assets"
+        };
+        console.log("\nMerging packages...\n");
+        mergePkg.bower(bowerTemplate, bowerPaths, '../app/assets/', true);
+        console.log("\nMerge complete.\n");
 
-    // Run package managers
-    let execa = require("execa");
-    console.log("Installing npm assets...");
-    execa.shellSync("yarn install --flat --no-lockfile", {
-        cwd: "../app/assets",
-        preferLocal: true,
-        localDir: "./node_modules/.bin",
-        stdio: "inherit"
-    });
-    // Yarn is able to output its completion. Bower... not so much.
-    console.log("\nInstalling bower assets...");
-    execa.shellSync("bower install --allow-root", {
-        cwd: "../app/assets",
-        preferLocal: true,
-        localDir: "./node_modules/.bin",
-        stdio: "inherit"
-    });
-    console.log("Done.\n");
+        // Perform installation
+        let execa = require("execa");
+        execa.shellSync("bower install --allow-root", {
+            cwd: "../app/assets",
+            preferLocal: true,
+            localDir: "./node_modules/.bin",
+            stdio: "inherit"
+        });
+        // Yarn is able to output its completion. Bower... not so much.
+        console.log("Done.\n");
+    }
 });
 
 
@@ -171,7 +184,7 @@ gulp.task('bundle-build', () => {
         '../app/assets/node_modules/'
     ];
     for (let path of paths) {
-        fs.copySync(path, `${publicAssetsDir}vendor/`, {overwrite: true});
+        fs.copySync(path, `${publicAssetsDir}vendor/`, { overwrite: true });
     }
     // Copy sprinkle assets
     paths = [];
@@ -179,7 +192,7 @@ gulp.task('bundle-build', () => {
         paths.push(`../app/sprinkles/${sprinkle}/assets/`);
     }
     for (let path of paths) {
-        fs.copySync(path, '../public/assets/', {overwrite: true});
+        fs.copySync(path, '../public/assets/', { overwrite: true });
     }
     return;
 });
@@ -217,8 +230,8 @@ gulp.task('bundle-clean', () => {
 // Deletes assets fetched by assets-install
 gulp.task('assets-clean', () => {
     "use strict";
-    return del(['../app/assets/bower_components/', '../app/assets/node_modules/'], { force: true });
+    return del(['../app/assets/bower_components/', '../app/assets/node_modules/', '../app/assets/bower.json', '../app/assets/package.json'], { force: true });
 });
 
 // Deletes all generated, or acquired files.
-gulp.task('clean', ['public-clean', 'bundle-clean', 'assets-clean'], () => {});
+gulp.task('clean', ['public-clean', 'bundle-clean', 'assets-clean'], () => { });

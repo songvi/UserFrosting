@@ -67,8 +67,10 @@ gulp.task('assets-install', () => {
     }
 
     // Generate packages
+    console.log("\nMerging packages...\n")
     mergePkg.yarn(yarnTemplate, yarnPaths, '../app/assets/', true);
     mergePkg.bower(bowerTemplate, bowerPaths, '../app/assets/', true);
+    console.log("\nMerge complete.\n")
 
     // Run package managers
     let execa = require("execa");
@@ -80,14 +82,14 @@ gulp.task('assets-install', () => {
         stdio: "inherit"
     });
     // Yarn is able to output its completion. Bower... not so much.
-    console.log("Installing bower assets...");
+    console.log("\nInstalling bower assets...");
     execa.shellSync("bower install --allow-root", {
         cwd: "../app/assets",
         preferLocal: true,
         localDir: "./node_modules/.bin",
         stdio: "inherit"
     });
-    console.log("Done.");
+    console.log("Done.\n");
 });
 
 

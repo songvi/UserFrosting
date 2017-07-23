@@ -91,7 +91,8 @@ class CoreServicesProvider
             if ($config['assets.use_raw']) {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.raw.path'];
 
-                $sprinkles = ['core'] + $c->sprinkleManager->getSprinkles();
+                $sprinkles = array_merge(['core'], $c->sprinkleManager->getSprinkles());
+                // Needed to transform paths to streams.
                 $streamPrefixTrans = [
                     \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'bower_components' => 'vendor',
                     \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'node_modules' => 'vendor'
@@ -99,15 +100,18 @@ class CoreServicesProvider
                 foreach ($sprinkles as $sprinkle) {
                     $streamPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = '';
                 }
+                // Needed to transform paths to debuggable/traceable urls.
                 $urlPrefixTrans = [
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME => '',
                     \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'bower_components' => 'vendor-bower',
                     \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'node_modules' => 'vendor-npm'
                 ];
+                foreach ($sprinkles as $sprinkle) {
+                    $urlPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = $sprinkle;
+                }
                 $assets = new Assets($locator, 'assets', $baseUrl, 'app', $streamPrefixTrans, $urlPrefixTrans);
 
                 // Load raw asset bundles for each Sprinkle.
-                $sprinkles = ['core'] + $c->sprinkleManager->getSprinkles();
+                $sprinkles = array_merge(['core'], $c->sprinkleManager->getSprinkles());
                 foreach ($sprinkles as $sprinkle) {
                     $resource = $locator->findResource("sprinkles://$sprinkle/" . $config['assets.raw.schema'], true, true);
                     if (file_exists($resource)) {

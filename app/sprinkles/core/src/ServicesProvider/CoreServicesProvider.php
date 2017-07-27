@@ -35,7 +35,7 @@ use Symfony\Component\HttpFoundation\Session\Storage\Handler\NullSessionHandler;
 use UserFrosting\Assets\AssetBundleSchema;
 use UserFrosting\Assets\Assets;
 use UserFrosting\Assets\AssetBundles\GulpBundleAssetsCompiledBundles as CompiledAssetBundles;
-use UserFrosting\Assets\AssetBundles\GulpBundleAssetsRawBundles as RawAssetBundles;
+use UserFrosting\Sprinkle\Core\Util\RawAssetBundles;
 use UserFrosting\I18n\MessageTranslator;
 use UserFrosting\Session\Session;
 use UserFrosting\Sprinkle\Core\Twig\CoreExtension;
@@ -94,16 +94,16 @@ class CoreServicesProvider
                 $sprinkles = array_merge(['core'], $c->sprinkleManager->getSprinkles());
                 // Needed to transform paths to streams.
                 $streamPrefixTrans = [
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'bower_components' => 'vendor',
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'node_modules' => 'vendor'
+                    \UserFrosting\BOWER_ASSET_DIR => 'vendor',
+                    \UserFrosting\NPM_ASSET_DIR => 'vendor'
                 ];
                 foreach ($sprinkles as $sprinkle) {
                     $streamPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = '';
                 }
                 // Needed to transform paths to debuggable/traceable urls.
                 $urlPrefixTrans = [
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'bower_components' => 'vendor-bower',
-                    \UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME . \UserFrosting\DS . 'node_modules' => 'vendor-npm'
+                    \UserFrosting\BOWER_ASSET_DIR => 'vendor-bower',
+                    \UserFrosting\NPM_ASSET_DIR => 'vendor-npm'
                 ];
                 foreach ($sprinkles as $sprinkle) {
                     $urlPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = $sprinkle;
@@ -111,13 +111,21 @@ class CoreServicesProvider
                 $assets = new Assets($locator, 'assets', $baseUrl, 'app', $streamPrefixTrans, $urlPrefixTrans);
 
                 // Load raw asset bundles for each Sprinkle.
-                $sprinkles = array_merge(['core'], $c->sprinkleManager->getSprinkles());
-                foreach ($sprinkles as $sprinkle) {
+
+                // Create asset bundle accessor with core as base.
+                $bundles = new RawAssetBundles($locator->findResource("sprinkles://core/" . $config['assets.raw.schema'], true, true));
+
+                // Extend asset bundle accessor for every subsequent sprinkle.
+                foreach ($c->sprinkleManager->getSprinkles() as $sprinkle) {
                     $resource = $locator->findResource("sprinkles://$sprinkle/" . $config['assets.raw.schema'], true, true);
                     if (file_exists($resource)) {
-                        $assets->addAssetBundles(new RawAssetBundles($resource));
+                        // Extend for bundles.
+                        $bundles->extend($resource);
                     }
                 }
+
+                // Add bundles to asset manager.
+                $assets->addAssetBundles($bundles);
             } else {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.compiled.path'];
                 $assets = new Assets($locator, 'assets', $baseUrl, 'app/public/assets');
@@ -207,17 +215,10 @@ class CoreServicesProvider
 
             // Construct base url from components, if not explicitly specified
             if (!isset($config['site.uri.public'])) {
-                $base_uri = $config['site.uri.base'];
-
-                $public = new Uri(
-                    $base_uri['scheme'],
-                    $base_uri['host'],
-                    $base_uri['port'],
-                    $base_uri['path']
-                );
+                $uri = $c->request->getUri();
 
                 // Slim\Http\Uri likes to add trailing slashes when the path is empty, so this fixes that.
-                $config['site.uri.public'] = trim($public, '/');
+                $config['site.uri.public'] = trim($uri->getBaseUrl() . '/' . $uri->getBasePath(), '/');
             }
 
             if (isset($config['display_errors'])) {

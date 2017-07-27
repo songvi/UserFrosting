@@ -21,6 +21,7 @@ define('UserFrosting\ROOT_DIR', realpath(__DIR__ . '/..'));
 // Composer's vendor directory
 define('UserFrosting\VENDOR_DIR', APP_DIR . '/vendor');
 
+// Directory names
 define('UserFrosting\APP_DIR_NAME', basename(__DIR__));
 define('UserFrosting\ASSET_DIR_NAME', 'assets');
 define('UserFrosting\BUILD_DIR_NAME', 'build');
@@ -36,3 +37,7 @@ define('UserFrosting\SRC_DIR_NAME', 'src');
 define('UserFrosting\SPRINKLES_DIR_NAME', 'sprinkles');
 define('UserFrosting\TEMPLATE_DIR_NAME', 'templates');
 define('UserFrosting\PUBLIC_DIR_NAME', 'public');
+
+// Vendor asset directories
+define('UserFrosting\NPM_ASSET_DIR', APP_DIR_NAME . DS . ASSET_DIR_NAME . DS . 'node_modules');
+define('UserFrosting\BOWER_ASSET_DIR', APP_DIR_NAME . DS . ASSET_DIR_NAME . DS . 'bower_components');

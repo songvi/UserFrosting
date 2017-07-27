@@ -29,7 +29,7 @@ const bundleConfigFile = `./${bundleFile}`;
 gulp.task('assets-install', [ 'assets-clean' ], () => {
     "use strict";
 
-    let mergePkg = require("merge-package-dependencies");
+    let mergePkg = require("@userfrosting/merge-package-dependencies");
 
     // See if there are any yarn packages.
     let yarnPaths = [];

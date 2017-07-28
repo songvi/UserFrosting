@@ -1,4 +1,8 @@
 "use strict";
+
+// Load environment variables
+require('dotenv').config({path: '../app/.env'});
+
 /**
  * Global dependencies
  */
@@ -6,6 +10,14 @@ const gulp = require('gulp');
 const fs = require('fs-extra');
 const del = require('del');
 const plugins = require('gulp-load-plugins')();
+
+// Set up logging
+let doILog = (process.env.UF_MODE == "dev");
+let logger = (message) => {
+    if (doILog) {
+        console.log(message);
+    }
+};
 
 const sprinklesDir = '../app/sprinkles';
 
@@ -24,7 +36,6 @@ const bundleConfigFile = `./${bundleFile}`;
 
 /**
  * Vendor asset task
- * @todo Use UF_MODE to determine verbosity level.
  */
 gulp.task('assets-install', [ 'assets-clean' ], () => {
     "use strict";
@@ -57,18 +68,18 @@ gulp.task('assets-install', [ 'assets-clean' ], () => {
             dependencies: {},
             engines: {}
         };
-        console.log("\nMerging packages...\n");
-        mergePkg.yarn(yarnTemplate, yarnPaths, '../app/assets/', true);
-        console.log("\nMerge complete.\n");
+        logger("\nMerging packages...\n");
+        mergePkg.yarn(yarnTemplate, yarnPaths, '../app/assets/', doILog);
+        logger("\nMerge complete.\n");
 
         // Perform installation.
-        console.log("Installing npm/yarn assets...");
+        logger("Installing npm/yarn assets...");
         let execa = require("execa");
         execa.shellSync("yarn install --flat --no-lockfile", {
             cwd: "../app/assets",
             preferLocal: true,
             localDir: "./node_modules/.bin",
-            stdio: "inherit"
+            stdio: "inherit"// MUST always log. Only way to see errors.
         });
     }
 
@@ -88,9 +99,9 @@ gulp.task('assets-install', [ 'assets-clean' ], () => {
         let bowerTemplate = {
             name: "uf-vendor-assets"
         };
-        console.log("\nMerging packages...\n");
-        mergePkg.bower(bowerTemplate, bowerPaths, '../app/assets/', true);
-        console.log("\nMerge complete.\n");
+        logger("\nMerging packages...\n");
+        mergePkg.bower(bowerTemplate, bowerPaths, '../app/assets/', doILog);
+        logger("\nMerge complete.\n");
 
         // Perform installation
         let execa = require("execa");
@@ -98,10 +109,10 @@ gulp.task('assets-install', [ 'assets-clean' ], () => {
             cwd: "../app/assets",
             preferLocal: true,
             localDir: "./node_modules/.bin",
-            stdio: "inherit"
+            stdio: "inherit"// MUST always log. Only way to see errors.
         });
         // Yarn is able to output its completion. Bower... not so much.
-        console.log("Done.\n");
+        logger("Done.\n");
     }
 });
 

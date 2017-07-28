@@ -60,7 +60,7 @@ class RawAssetBundles extends GulpBundleAssetsRawBundles {
                                 case 'merge':
                                     // Merge with existing bundle.
                                     foreach ($standardisedBundle as $assetPath) {
-                                        if (!in_array($this->cssBundles[$bundleName])) {
+                                        if (!in_array($assetPath, $this->cssBundles[$bundleName])) {
                                             $this->cssBundles[$bundleName][] = $assetPath;
                                         }
                                     }
@@ -97,7 +97,7 @@ class RawAssetBundles extends GulpBundleAssetsRawBundles {
                                 case 'merge':
                                     // Merge with existing bundle.
                                     foreach ($standardisedBundle as $assetPath) {
-                                        if (!in_array($this->jsBundles[$bundleName])) {
+                                        if (!in_array($assetPath, $this->jsBundles[$bundleName])) {
                                             $this->jsBundles[$bundleName][] = $assetPath;
                                         }
                                     }

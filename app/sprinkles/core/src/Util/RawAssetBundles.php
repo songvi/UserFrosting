@@ -49,7 +49,7 @@ class RawAssetBundles extends GulpBundleAssetsRawBundles {
                     // Attempt to add CSS bundle
                     try {
                         $standardisedBundle = $this->standardiseBundle($bundle->styles);
-                        if (!array_key_exists($this->cssBundles, $bundleName)) {
+                        if (!array_key_exists($bundleName, $this->cssBundles)) {
                             $this->cssBundles[$bundleName] = $standardisedBundle;
                         } else {
                             switch ($collisionRule) {
@@ -86,7 +86,7 @@ class RawAssetBundles extends GulpBundleAssetsRawBundles {
                     // Attempt to add JS bundle
                     try {
                         $standardisedBundle = $this->standardiseBundle($bundle->scripts);
-                        if (!array_key_exists($this->jsBundles, $bundleName)) {
+                        if (!array_key_exists($bundleName, $this->jsBundles)) {
                             $this->jsBundles[$bundleName] = $standardisedBundle;
                         } else {
                             switch ($collisionRule) {

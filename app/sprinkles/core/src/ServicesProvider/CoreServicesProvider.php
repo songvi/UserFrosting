@@ -34,6 +34,7 @@ use Slim\Views\TwigExtension;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\NullSessionHandler;
 use UserFrosting\Assets\AssetBundleSchema;
 use UserFrosting\Assets\Assets;
+use UserFrosting\Assets\PathTransformer\PrefixTransformer;
 use UserFrosting\Assets\AssetBundles\GulpBundleAssetsCompiledBundles as CompiledAssetBundles;
 use UserFrosting\Sprinkle\Core\Util\RawAssetBundles;
 use UserFrosting\I18n\MessageTranslator;
@@ -92,23 +93,15 @@ class CoreServicesProvider
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.raw.path'];
 
                 $sprinkles = array_merge(['core'], $c->sprinkleManager->getSprinkles());
-                // Needed to transform paths to streams.
-                $streamPrefixTrans = [
-                    \UserFrosting\BOWER_ASSET_DIR => 'vendor',
-                    \UserFrosting\NPM_ASSET_DIR => 'vendor'
-                ];
+
+                $prefixTransformer = new PrefixTransformer();
+                $prefixTransformer->define(\UserFrosting\BOWER_ASSET_DIR, 'vendor-bower');
+                $prefixTransformer->define(\UserFrosting\NPM_ASSET_DIR, 'vendor-npm');
+
                 foreach ($sprinkles as $sprinkle) {
-                    $streamPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = '';
+                    $prefixTransformer->define(\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME, $sprinkle);
                 }
-                // Needed to transform paths to debuggable/traceable urls.
-                $urlPrefixTrans = [
-                    \UserFrosting\BOWER_ASSET_DIR => 'vendor-bower',
-                    \UserFrosting\NPM_ASSET_DIR => 'vendor-npm'
-                ];
-                foreach ($sprinkles as $sprinkle) {
-                    $urlPrefixTrans[\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME] = $sprinkle;
-                }
-                $assets = new Assets($locator, 'assets', $baseUrl, 'app', $streamPrefixTrans, $urlPrefixTrans);
+                $assets = new Assets($locator, 'assets', $baseUrl, $locator->getBase(), $prefixTransformer);
 
                 // Load raw asset bundles for each Sprinkle.
 
@@ -128,7 +121,7 @@ class CoreServicesProvider
                 $assets->addAssetBundles($bundles);
             } else {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.compiled.path'];
-                $assets = new Assets($locator, 'assets', $baseUrl, 'app/public/assets');
+                $assets = new Assets($locator, 'assets', $baseUrl, $locator->getBase());
 
                 // Load compiled asset bundle.
                 $assets->addAssetBundles(new CompiledAssetBundles($locator("build://" . $config['assets.compiled.schema'], true, true)));

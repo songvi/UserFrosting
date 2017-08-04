@@ -8,8 +8,8 @@
 - Fixed syntax error in Portugese translations
 - Minimise verbosity of assets build scripts when not in 'dev' mode
 - Fix to stop bower complaining about sudo when using docker
+- The `assetLoader` service has been deprecated.
 - **Potential breaking change:** Some packages like `Handlebars` are organised differently at npm. If referencing vendor assets introduced by UF, make sure they are still correct.
-- **Potential breaking change:** The `assetLoader` service is no longer available.
 
 ## v4.0.24-Alpha
 - Fixes to nginx config file, and add location block for LE acme challenge

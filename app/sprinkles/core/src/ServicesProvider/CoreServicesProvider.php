@@ -50,6 +50,7 @@ use UserFrosting\Sprinkle\Core\Throttle\Throttler;
 use UserFrosting\Sprinkle\Core\Throttle\ThrottleRule;
 use UserFrosting\Sprinkle\Core\Util\CheckEnvironment;
 use UserFrosting\Sprinkle\Core\Util\ClassMapper;
+use UserFrosting\Sprinkle\Core\Util\AssetLoader;
 use UserFrosting\Support\Exception\BadRequestException;
 
 /**
@@ -74,6 +75,21 @@ class CoreServicesProvider
          */
         $container['alerts'] = function ($c) {
             return new MessageStream($c->session, $c->config['session.keys.alerts'], $c->translator);
+        };
+
+        /**
+         * Asset loader service
+         * 
+         * Loads assets from a specified relative location.
+         * Assets are Javascript, CSS, image, and other files used by your site.
+         * 
+         * @deprecated 4.0.25-alpha This service was formerly used to serve frontend assets during development.
+         */
+        $container['assetLoader'] = function ($c) {
+            $basePath = \UserFrosting\APP_DIR . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME;
+            $pattern = "/^[A-Za-z0-9_\-]+\/assets\//";
+
+            return new AssetLoader($basePath, $pattern);
         };
 
         /**

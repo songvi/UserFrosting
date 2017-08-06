@@ -101,8 +101,14 @@ class CoreServicesProvider
         $container['assets'] = function ($c) {
             $config = $c->config;
             $locator = $c->locator;
-
-            $assets;
+            
+            // Hacky way to clean up locator paths.
+            $locatorPaths = [];
+            foreach ($locator->getPaths('assets') as $pathSet) {
+                foreach ($pathSet as $path) {
+                    $locatorPaths[] = $path;
+                }
+            }
 
             // Load asset schema
             if ($config['assets.use_raw']) {
@@ -115,9 +121,9 @@ class CoreServicesProvider
                 $prefixTransformer->define(\UserFrosting\NPM_ASSET_DIR, 'vendor-npm');
 
                 foreach ($sprinkles as $sprinkle) {
-                    $prefixTransformer->define(\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME, $sprinkle);
+                    $prefixTransformer->define(\UserFrosting\APP_DIR_NAME . \UserFrosting\DS . \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle . \UserFrosting\DS . \UserFrosting\ASSET_DIR_NAME, \UserFrosting\SPRINKLES_DIR_NAME . \UserFrosting\DS . $sprinkle);
                 }
-                $assets = new Assets($locator, 'assets', $baseUrl, $locator->getBase(), $prefixTransformer);
+                $assets = new Assets($locator, 'assets', $locatorPaths, $baseUrl, $locator->getBase(), $prefixTransformer);
 
                 // Load raw asset bundles for each Sprinkle.
 
@@ -137,7 +143,7 @@ class CoreServicesProvider
                 $assets->addAssetBundles($bundles);
             } else {
                 $baseUrl = $config['site.uri.public'] . '/' . $config['assets.compiled.path'];
-                $assets = new Assets($locator, 'assets', $baseUrl, $locator->getBase());
+                $assets = new Assets($locator, 'assets', $locatorPaths, $baseUrl, $locator->getBase());
 
                 // Load compiled asset bundle.
                 $assets->addAssetBundles(new CompiledAssetBundles($locator("build://" . $config['assets.compiled.schema'], true, true)));

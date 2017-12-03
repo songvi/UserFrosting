@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32208261-b2fc-4fdf-bfcd-1a1a20bbe1de" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/.gitkeep" afterPath="$PROJECT_DIR$/app/cache/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/.gitkeep" afterPath="$PROJECT_DIR$/app/logs/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sessions/.gitkeep" afterPath="$PROJECT_DIR$/app/sessions/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/sprinkles/core/config/default.php" afterPath="$PROJECT_DIR$/app/sprinkles/core/config/default.php" />
+    </list>
+    <ignored path="UserFrosting.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="UserFrosting" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="OidcAuthenticator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Authenticate/OidcAuthenticator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.9">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding>
+                <element signature="e#61#85#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCredentials.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/GrantType/UserCredentials.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.779661">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OidcUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OidcUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.566667">
+              <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sprinkles/account/src/Database/Models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.5">
+              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+              <folding>
+                <element signature="e#557#1140#0#PHP" expanded="false" />
+                <element signature="e#1194#1283#0#PHP" expanded="false" />
+                <element signature="e#1321#1431#0#PHP" expanded="false" />
+                <element signature="e#1458#1719#0#PHP" expanded="false" />
+                <element signature="e#1726#1940#0#PHP" expanded="false" />
+                <element signature="e#1965#1991#0#PHP" expanded="false" />
+                <element signature="e#1998#2092#0#PHP" expanded="false" />
+                <element signature="e#2116#2144#0#PHP" expanded="false" />
+                <element signature="e#2172#2199#0#PHP" expanded="false" />
+                <element signature="e#2206#2296#0#PHP" expanded="false" />
+                <element signature="e#2336#2407#0#PHP" expanded="false" />
+                <element signature="e#2444#2922#0#PHP" expanded="false" />
+                <element signature="e#2927#3199#0#PHP" expanded="false" />
+                <element signature="e#2976#3095#0#PHP" expanded="false" />
+                <element signature="e#2992#3094#0#PHP" expanded="false" />
+                <element signature="e#2972#3193#0#PHP" expanded="false" />
+                <element signature="e#3134#3193#0#PHP" expanded="false" />
+                <element signature="e#3205#3444#0#PHP" expanded="false" />
+                <element signature="e#3449#3873#0#PHP" expanded="false" />
+                <element signature="e#3492#3867#0#PHP" expanded="false" />
+                <element signature="e#3593#3809#0#PHP" expanded="false" />
+                <element signature="e#3810#3867#0#PHP" expanded="false" />
+                <element signature="e#3879#4001#0#PHP" expanded="false" />
+                <element signature="e#4006#4258#0#PHP" expanded="false" />
+                <element signature="e#4264#4544#0#PHP" expanded="false" />
+                <element signature="e#4549#5500#0#PHP" expanded="false" />
+                <element signature="e#4734#5469#0#PHP" expanded="false" />
+                <element signature="e#5339#5469#0#PHP" expanded="false" />
+                <element signature="e#5506#5901#0#PHP" expanded="false" />
+                <element signature="e#5906#6075#0#PHP" expanded="false" />
+                <element signature="e#6081#6200#0#PHP" expanded="false" />
+                <element signature="e#6205#6339#0#PHP" expanded="false" />
+                <element signature="e#6345#6461#0#PHP" expanded="false" />
+                <element signature="e#6466#6575#0#PHP" expanded="false" />
+                <element signature="e#6581#6685#0#PHP" expanded="false" />
+                <element signature="e#6690#6886#0#PHP" expanded="false" />
+                <element signature="e#6743#6838#0#PHP" expanded="false" />
+                <element signature="e#6892#6995#0#PHP" expanded="false" />
+                <element signature="e#7000#7148#0#PHP" expanded="false" />
+                <element signature="e#7154#7371#0#PHP" expanded="false" />
+                <element signature="e#7376#7616#0#PHP" expanded="false" />
+                <element signature="e#7622#7738#0#PHP" expanded="false" />
+                <element signature="e#7743#7990#0#PHP" expanded="false" />
+                <element signature="e#7996#8094#0#PHP" expanded="false" />
+                <element signature="e#8099#8338#0#PHP" expanded="false" />
+                <element signature="e#8344#8516#0#PHP" expanded="false" />
+                <element signature="e#8521#8786#0#PHP" expanded="false" />
+                <element signature="e#8792#8964#0#PHP" expanded="false" />
+                <element signature="e#8969#9372#0#PHP" expanded="false" />
+                <element signature="e#9246#9319#0#PHP" expanded="false" />
+                <element signature="e#9378#9650#0#PHP" expanded="false" />
+                <element signature="e#9655#9854#0#PHP" expanded="false" />
+                <element signature="e#9719#9773#0#PHP" expanded="false" />
+                <element signature="e#9719#9806#0#PHP" expanded="false" />
+                <element signature="e#9860#10195#0#PHP" expanded="false" />
+                <element signature="e#10200#11459#0#PHP" expanded="false" />
+                <element signature="e#10326#10446#0#PHP" expanded="false" />
+                <element signature="e#10402#10445#0#PHP" expanded="false" />
+                <element signature="e#10588#11382#0#PHP" expanded="false" />
+                <element signature="e#10633#11372#0#PHP" expanded="false" />
+                <element signature="e#10796#11372#0#PHP" expanded="false" />
+                <element signature="e#10943#11358#0#PHP" expanded="false" />
+                <element signature="e#11163#11358#0#PHP" expanded="false" />
+                <element signature="e#11465#11757#0#PHP" expanded="false" />
+                <element signature="e#11762#11967#0#PHP" expanded="false" />
+                <element signature="e#11815#11937#0#PHP" expanded="false" />
+                <element signature="e#11892#11936#0#PHP" expanded="false" />
+                <element signature="e#11973#12108#0#PHP" expanded="false" />
+                <element signature="e#12113#12375#0#PHP" expanded="false" />
+                <element signature="e#12381#12546#0#PHP" expanded="false" />
+                <element signature="e#12551#13037#0#PHP" expanded="false" />
+                <element signature="e#12729#13030#0#PHP" expanded="false" />
+                <element signature="e#13043#13179#0#PHP" expanded="false" />
+                <element signature="e#13184#13476#0#PHP" expanded="false" />
+                <element signature="e#13482#13700#0#PHP" expanded="false" />
+                <element signature="e#13705#13951#0#PHP" expanded="false" />
+                <element signature="e#13772#13944#0#PHP" expanded="false" />
+                <element signature="e#13799#13943#1#PHP" expanded="false" />
+                <element signature="e#13844#13932#0#PHP" expanded="false" />
+                <element signature="e#13957#14196#0#PHP" expanded="false" />
+                <element signature="e#14201#14424#0#PHP" expanded="false" />
+                <element signature="e#14430#14649#0#PHP" expanded="false" />
+                <element signature="e#14654#14960#0#PHP" expanded="false" />
+                <element signature="e#14802#14918#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OidcUserAux.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OidcUserAux.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokenController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Controller/TokenController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.779661">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37246963">
+              <caret line="320" column="0" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scope.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Scope.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.779661">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OauthStorePdo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/OauthStorePdo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.5333333">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="e#56#79#0#PHP" expanded="true" />
+                <element signature="e#1877#2789#0#PHP" expanded="false" />
+                <element signature="e#2795#3217#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCredential.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/UserCredential.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.466666">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#57#101#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/sprinkles/site/config/default.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/site/composer.json" />
+        <option value="$PROJECT_DIR$/app/sprinkles/OAuth2Server/config/default.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/schema/requests/user/create.yaml" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/MemberController.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OIDCUserAux.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Scopes/OIDCUserAuxScope.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OIDCUser.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Migrations/v400/OIDCUserTable.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/templates/forms/oidc-user.html.twig" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OIDCUserController.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/templates/pages/oidc-user.html.twig" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/templates/pages/user.html.twig" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/templates/forms/user.html.twig" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Scopes/OidcUserAuxScope.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Migrations/v400/OidcUserTable.php" />
+        <option value="$PROJECT_DIR$/app/.env" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/schema/requests/oidc-user/create.yaml" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/schema/requests/oidc-user/edit-info.yaml" />
+        <option value="$PROJECT_DIR$/app/sprinkles/account/config/default.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/routes/iodc-user.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles.example.json" />
+        <option value="$PROJECT_DIR$/app/sprinkles.json" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OidcUserAux.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Migrations/v400/OidcOauthScopes.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/composer.json" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/AuthStack/AuthStack.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/AuthStack/AStack.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/account/src/Authenticate/Authenticator.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcAccountController.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/core/config/default.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/routes/users.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/ServicesProvider/ServicesProvider.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/OauthStorePdo.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/UserCredential.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OidcUser.php" />
+        <option value="$PROJECT_DIR$/app/sprinkles/oidc-user/src/Authenticate/OidcAuthenticator.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpDebugGeneral" notify_if_session_was_finished_without_being_paused="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="uf.dev.php" id="f1f7986c-b10b-45bb-901e-940f2d06469b" name="Unnamed" />
+      <server host="localhost" id="5281dac3-9a7b-450a-ac29-0e7c69b2bd4c" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/public" remote-root="/usr/share/phpmyadmin" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
+    <option name="y" value="-1" />
+    <option name="width" value="1922" />
+    <option name="height" value="1059" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver-configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServicesProvider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oauth2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthStack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Authenticate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schema" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="requests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oidc-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="account" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="account" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="account" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Authenticate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprinkles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="account" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserFrosting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/app/sprinkles.json&#10;/var/www/UserFrosting/app/logs/userfrosting.log" />
+    <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/sprinkles/oidc-user/config" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/sprinkles/oidc-user/templates" />
+      <recent name="$PROJECT_DIR$/app/sprinkles/oidc-user/templates/pages" />
+      <recent name="$PROJECT_DIR$/app/sprinkles/oidc-user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/sprinkles/oidc-user/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/public/index.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32208261-b2fc-4fdf-bfcd-1a1a20bbe1de" name="Default" comment="" />
+      <created>1509829248635</created>
+      <option name="number" value="Default" />
+      <updated>1509829248635</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-1" width="1922" height="1059" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21309656" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4517203" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23771368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37957823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3529412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/account/src/Authenticate/Authenticator.php</url>
+          <line>153</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php</url>
+          <line>112</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/admin/src/Controller/UserController.php</url>
+          <line>991</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/admin/src/Controller/UserController.php</url>
+          <line>1011</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php</url>
+          <line>154</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php</url>
+          <line>227</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php</url>
+          <line>337</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcAccountController.php</url>
+          <line>221</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcAccountController.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/account/src/Controller/AccountController.php</url>
+          <line>288</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcAccountController.php</url>
+          <line>428</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcAccountController.php</url>
+          <line>385</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/Token.php</url>
+          <line>18</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Controller/TokenController.php</url>
+          <line>86</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Controller/TokenController.php</url>
+          <line>161</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/UserCredential.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Controller/TokenController.php</url>
+          <line>174</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/OauthStorePdo.php</url>
+          <line>37</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/OauthStorePdo.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Authenticate/OidcAuthenticator.php</url>
+          <line>70</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="110" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="messages.php">
+        <watch expression="$user-&gt;roles()" language="PHP" />
+      </configuration>
+      <configuration name="composer">
+        <watch expression="$user-&gt;oidcUserAux" language="PHP" />
+      </configuration>
+      <configuration name="get_scripts.js.php">
+        <watch expression="$user-&gt;roles()" language="PHP" />
+      </configuration>
+      <configuration name="sql.php">
+        <watch expression="$user-&gt;oidcUserAux" language="PHP" />
+      </configuration>
+      <configuration name="index.php">
+        <watch expression="$user-&gt;attributes" />
+        <watch expression="$user-&gt;attributesToArray()" language="PHP" />
+      </configuration>
+      <configuration name="get_image.js.php">
+        <watch expression="$user-&gt;roles()" language="PHP" />
+      </configuration>
+      <configuration name="phpmyadmin.css.php">
+        <watch expression="$user-&gt;roles()" language="PHP" />
+      </configuration>
+      <configuration name="whitelist.php">
+        <watch expression="$user-&gt;roles()" language="PHP" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/AuthStack/AStack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.8">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/admin/src/ServicesProvider/ServicesProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.266667">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/account/src/Controller/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0">
+          <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+          <folding>
+            <element signature="e#1636#1911#0#PHP" expanded="false" />
+            <element signature="e#1967#2183#0#PHP" expanded="false" />
+            <element signature="e#2188#4261#0#PHP" expanded="false" />
+            <element signature="e#2831#3295#0#PHP" expanded="false" />
+            <element signature="e#3080#3263#0#PHP" expanded="false" />
+            <element signature="e#3147#3249#0#PHP" expanded="false" />
+            <element signature="e#3520#3594#0#PHP" expanded="false" />
+            <element signature="e#3934#4255#0#PHP" expanded="false" />
+            <element signature="e#4177#4255#0#PHP" expanded="false" />
+            <element signature="e#4267#4705#0#PHP" expanded="false" />
+            <element signature="e#4710#6247#0#PHP" expanded="false" />
+            <element signature="e#5603#5849#0#PHP" expanded="false" />
+            <element signature="e#5939#6108#0#PHP" expanded="false" />
+            <element signature="e#6253#7012#0#PHP" expanded="false" />
+            <element signature="e#7017#10405#0#PHP" expanded="false" />
+            <element signature="e#7955#8097#0#PHP" expanded="false" />
+            <element signature="e#8274#8323#0#PHP" expanded="false" />
+            <element signature="e#8414#8581#0#PHP" expanded="false" />
+            <element signature="e#8750#10184#0#PHP" expanded="false" />
+            <element signature="e#8772#10183#2#PHP" expanded="false" />
+            <element signature="e#9299#10173#0#PHP" expanded="false" />
+            <element signature="e#9705#9846#0#PHP" expanded="false" />
+            <element signature="e#9705#10106#0#PHP" expanded="false" />
+            <element signature="e#9883#10105#1#PHP" expanded="false" />
+            <element signature="e#10411#10641#0#PHP" expanded="false" />
+            <element signature="e#10646#10795#0#PHP" expanded="false" />
+            <element signature="e#10801#10933#0#PHP" expanded="false" />
+            <element signature="e#10938#11304#0#PHP" expanded="false" />
+            <element signature="e#11152#11247#0#PHP" expanded="false" />
+            <element signature="e#11152#11297#0#PHP" expanded="false" />
+            <element signature="e#11310#11857#0#PHP" expanded="false" />
+            <element signature="e#13868#13977#0#PHP" expanded="false" />
+            <element signature="e#13927#13976#0#PHP" expanded="false" />
+            <element signature="e#14347#14531#0#PHP" expanded="false" />
+            <element signature="e#15166#15291#0#PHP" expanded="false" />
+            <element signature="e#15296#15614#0#PHP" expanded="false" />
+            <element signature="e#15620#15918#0#PHP" expanded="false" />
+            <element signature="e#15923#16458#0#PHP" expanded="false" />
+            <element signature="e#16202#16451#0#PHP" expanded="false" />
+            <element signature="e#16272#16450#0#PHP" expanded="false" />
+            <element signature="e#16296#16440#1#PHP" expanded="false" />
+            <element signature="e#16330#16426#1#PHP" expanded="false" />
+            <element signature="e#16465#16769#0#PHP" expanded="false" />
+            <element signature="e#16774#17886#0#PHP" expanded="false" />
+            <element signature="e#16938#17054#0#PHP" expanded="false" />
+            <element signature="e#17257#17426#0#PHP" expanded="false" />
+            <element signature="e#17639#17879#0#PHP" expanded="false" />
+            <element signature="e#17702#17878#0#PHP" expanded="false" />
+            <element signature="e#17726#17868#1#PHP" expanded="false" />
+            <element signature="e#17760#17854#1#PHP" expanded="false" />
+            <element signature="e#17892#18194#0#PHP" expanded="false" />
+            <element signature="e#18199#18750#0#PHP" expanded="false" />
+            <element signature="e#18486#18743#0#PHP" expanded="false" />
+            <element signature="e#18560#18742#0#PHP" expanded="false" />
+            <element signature="e#18584#18732#1#PHP" expanded="false" />
+            <element signature="e#18618#18718#1#PHP" expanded="false" />
+            <element signature="e#18756#18893#0#PHP" expanded="false" />
+            <element signature="e#18898#19681#0#PHP" expanded="false" />
+            <element signature="e#19356#19674#0#PHP" expanded="false" />
+            <element signature="e#19425#19673#0#PHP" expanded="false" />
+            <element signature="e#19449#19590#1#PHP" expanded="false" />
+            <element signature="e#19483#19576#1#PHP" expanded="false" />
+            <element signature="e#19687#19967#0#PHP" expanded="false" />
+            <element signature="e#19972#20698#0#PHP" expanded="false" />
+            <element signature="e#20375#20691#0#PHP" expanded="false" />
+            <element signature="e#20442#20690#0#PHP" expanded="false" />
+            <element signature="e#20466#20607#1#PHP" expanded="false" />
+            <element signature="e#20500#20593#1#PHP" expanded="false" />
+            <element signature="e#20704#21032#0#PHP" expanded="false" />
+            <element signature="e#21037#22649#0#PHP" expanded="false" />
+            <element signature="e#21401#21525#0#PHP" expanded="false" />
+            <element signature="e#22128#22642#0#PHP" expanded="false" />
+            <element signature="e#22199#22641#0#PHP" expanded="false" />
+            <element signature="e#22258#22631#1#PHP" expanded="false" />
+            <element signature="e#22292#22498#1#PHP" expanded="false" />
+            <element signature="e#22655#22882#0#PHP" expanded="false" />
+            <element signature="e#22887#23861#0#PHP" expanded="false" />
+            <element signature="e#23242#23411#0#PHP" expanded="false" />
+            <element signature="e#23618#23854#0#PHP" expanded="false" />
+            <element signature="e#23680#23853#0#PHP" expanded="false" />
+            <element signature="e#23704#23843#1#PHP" expanded="false" />
+            <element signature="e#23738#23829#1#PHP" expanded="false" />
+            <element signature="e#23867#24218#0#PHP" expanded="false" />
+            <element signature="e#24882#25086#0#PHP" expanded="false" />
+            <element signature="e#25817#25939#0#PHP" expanded="false" />
+            <element signature="e#26053#26215#0#PHP" expanded="false" />
+            <element signature="e#26225#26295#0#PHP" expanded="false" />
+            <element signature="e#26616#26778#0#PHP" expanded="false" />
+            <element signature="e#26718#26777#0#PHP" expanded="false" />
+            <element signature="e#26900#27753#0#PHP" expanded="false" />
+            <element signature="e#27758#34772#0#PHP" expanded="false" />
+            <element signature="e#28468#28648#0#PHP" expanded="false" />
+            <element signature="e#28765#28987#0#PHP" expanded="false" />
+            <element signature="e#29051#29226#0#PHP" expanded="false" />
+            <element signature="e#29456#29615#0#PHP" expanded="false" />
+            <element signature="e#30028#30150#0#PHP" expanded="false" />
+            <element signature="e#30373#30447#0#PHP" expanded="false" />
+            <element signature="e#30510#30710#0#PHP" expanded="false" />
+            <element signature="e#30720#30909#0#PHP" expanded="false" />
+            <element signature="e#30957#31303#0#PHP" expanded="false" />
+            <element signature="e#31112#31293#0#PHP" expanded="false" />
+            <element signature="e#31313#31383#0#PHP" expanded="false" />
+            <element signature="e#31545#31721#0#PHP" expanded="false" />
+            <element signature="e#31662#31721#0#PHP" expanded="false" />
+            <element signature="e#31932#32178#0#PHP" expanded="false" />
+            <element signature="e#32648#34721#0#PHP" expanded="false" />
+            <element signature="e#32670#34720#2#PHP" expanded="false" />
+            <element signature="e#33049#33234#0#PHP" expanded="false" />
+            <element signature="e#33142#33233#0#PHP" expanded="false" />
+            <element signature="e#33669#34710#0#PHP" expanded="false" />
+            <element signature="e#34073#34214#0#PHP" expanded="false" />
+            <element signature="e#34073#34389#0#PHP" expanded="false" />
+            <element signature="e#34251#34388#1#PHP" expanded="false" />
+            <element signature="e#34561#34710#0#PHP" expanded="false" />
+            <element signature="e#34778#35256#0#PHP" expanded="false" />
+            <element signature="e#35261#38609#0#PHP" expanded="false" />
+            <element signature="e#36207#36349#0#PHP" expanded="false" />
+            <element signature="e#36526#36575#0#PHP" expanded="false" />
+            <element signature="e#36664#36831#0#PHP" expanded="false" />
+            <element signature="e#37027#38445#0#PHP" expanded="false" />
+            <element signature="e#37049#38444#2#PHP" expanded="false" />
+            <element signature="e#37645#38434#0#PHP" expanded="false" />
+            <element signature="e#38051#38192#0#PHP" expanded="false" />
+            <element signature="e#38051#38367#0#PHP" expanded="false" />
+            <element signature="e#38229#38366#1#PHP" expanded="false" />
+            <element signature="e#38615#39140#0#PHP" expanded="false" />
+            <element signature="e#39145#41353#0#PHP" expanded="false" />
+            <element signature="e#40094#40236#0#PHP" expanded="false" />
+            <element signature="e#40426#40537#0#PHP" expanded="false" />
+            <element signature="e#40481#40536#0#PHP" expanded="false" />
+            <element signature="e#40548#40735#0#PHP" expanded="false" />
+            <element signature="e#41019#41097#0#PHP" expanded="false" />
+            <element signature="e#41359#41769#0#PHP" expanded="false" />
+            <element signature="e#41774#45258#0#PHP" expanded="false" />
+            <element signature="e#42434#42638#0#PHP" expanded="false" />
+            <element signature="e#43369#43491#0#PHP" expanded="false" />
+            <element signature="e#43537#43749#0#PHP" expanded="false" />
+            <element signature="e#44006#44261#0#PHP" expanded="false" />
+            <element signature="e#44271#44341#0#PHP" expanded="false" />
+            <element signature="e#44394#44650#0#PHP" expanded="false" />
+            <element signature="e#44532#44650#0#PHP" expanded="false" />
+            <element signature="e#44971#45133#0#PHP" expanded="false" />
+            <element signature="e#45073#45132#0#PHP" expanded="false" />
+            <element signature="e#45264#45516#0#PHP" expanded="false" />
+            <element signature="e#45521#46266#0#PHP" expanded="false" />
+            <element signature="e#46164#46259#0#PHP" expanded="false" />
+            <element signature="e#46184#46234#0#PHP" expanded="false" />
+            <element signature="e#46272#46625#0#PHP" expanded="false" />
+            <element signature="e#46630#48292#0#PHP" expanded="false" />
+            <element signature="e#47603#47849#0#PHP" expanded="false" />
+            <element signature="e#47939#48120#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/schema/requests/profile-settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/Http/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2542372">
+          <caret line="552" column="0" selection-start-line="552" selection-start-column="0" selection-end-line="552" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/Http/Uri.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2542372">
+          <caret line="599" column="0" selection-start-line="599" selection-start-column="0" selection-end-line="599" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9152542">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/MiddlewareAwareTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9152542">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.9">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/src/ServicesProvider/ServicesProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.1">
+          <caret line="262" column="26" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/account/config/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/config/dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/config/testing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/config/production.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/config/auth_stack.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/config/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.3">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/ClientAssertionType/ClientAssertionTypeInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.62711865">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/ClientAssertionType/HttpBasic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6949153">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.933334">
+          <caret line="376" column="5" selection-start-line="376" selection-start-column="5" selection-end-line="376" selection-end-column="5" />
+          <folding>
+            <element signature="e#60#111#0#PHP" expanded="true" />
+            <element signature="e#996#4239#0#PHP" expanded="false" />
+            <element signature="e#4245#4736#0#PHP" expanded="false" />
+            <element signature="e#8527#8977#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/routes/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.7">
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Controller/OidcAccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-200.2">
+          <caret line="428" column="53" selection-start-line="428" selection-start-column="53" selection-end-line="428" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Storage/UserCredentialsInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.13559322">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/pimple/pimple/src/Pimple/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1016948">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/filp/whoops/src/Whoops/Exception/Frame.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1016948">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/filp/whoops/src/Whoops/Exception/FrameCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1016948">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/src/Util/Util.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/src/Error/Renderer/WhoopsRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/src/Error/Renderer/ErrorRenderer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.033334">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/src/Error/Handler/ExceptionHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.766667">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/Http/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1016948">
+          <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1016948">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7627118">
+          <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/system/UserFrosting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/core/src/Util/ShutdownHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/Authorize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.766667">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1016948">
+          <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/ServicesProvider/ServicesProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.766667">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#66#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7627118">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/account/src/Authenticate/Authenticator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0">
+          <caret line="129" column="108" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="108" />
+          <folding>
+            <element signature="e#1228#1472#0#PHP" expanded="false" />
+            <element signature="e#1499#1534#0#PHP" expanded="false" />
+            <element signature="e#1568#1599#0#PHP" expanded="false" />
+            <element signature="e#1629#1659#0#PHP" expanded="false" />
+            <element signature="e#1688#1717#0#PHP" expanded="false" />
+            <element signature="e#1745#1773#0#PHP" expanded="false" />
+            <element signature="e#1813#1850#0#PHP" expanded="false" />
+            <element signature="e#1890#1924#0#PHP" expanded="false" />
+            <element signature="e#1957#1985#0#PHP" expanded="false" />
+            <element signature="e#2012#2119#0#PHP" expanded="false" />
+            <element signature="e#2161#2487#0#PHP" expanded="false" />
+            <element signature="e#3483#3705#0#PHP" expanded="false" />
+            <element signature="e#3783#3941#0#PHP" expanded="false" />
+            <element signature="e#4223#4299#0#PHP" expanded="false" />
+            <element signature="e#4416#4502#0#PHP" expanded="false" />
+            <element signature="e#4564#4655#0#PHP" expanded="false" />
+            <element signature="e#4719#4814#0#PHP" expanded="false" />
+            <element signature="e#4908#5265#0#PHP" expanded="false" />
+            <element signature="e#5042#5265#0#PHP" expanded="false" />
+            <element signature="e#5277#5370#0#PHP" expanded="false" />
+            <element signature="e#5375#5450#0#PHP" expanded="false" />
+            <element signature="e#5456#5561#0#PHP" expanded="false" />
+            <element signature="e#5566#5633#0#PHP" expanded="false" />
+            <element signature="e#5639#6259#0#PHP" expanded="false" />
+            <element signature="e#6264#7048#0#PHP" expanded="false" />
+            <element signature="e#6644#6791#0#PHP" expanded="false" />
+            <element signature="e#6729#6791#0#PHP" expanded="false" />
+            <element signature="e#7054#7625#0#PHP" expanded="false" />
+            <element signature="e#7630#8700#0#PHP" expanded="false" />
+            <element signature="e#7858#7946#0#PHP" expanded="false" />
+            <element signature="e#8069#8281#0#PHP" expanded="false" />
+            <element signature="e#8196#8271#0#PHP" expanded="false" />
+            <element signature="e#8706#9113#0#PHP" expanded="false" />
+            <element signature="e#9696#10101#0#PHP" expanded="false" />
+            <element signature="e#9927#10016#0#PHP" expanded="false" />
+            <element signature="e#10031#10101#0#PHP" expanded="false" />
+            <element signature="e#10160#10416#0#PHP" expanded="false" />
+            <element signature="e#10421#10497#0#PHP" expanded="false" />
+            <element signature="e#10503#10815#0#PHP" expanded="false" />
+            <element signature="e#10820#11751#0#PHP" expanded="false" />
+            <element signature="e#10989#11670#0#PHP" expanded="false" />
+            <element signature="e#11392#11670#0#PHP" expanded="false" />
+            <element signature="e#11546#11660#0#PHP" expanded="false" />
+            <element signature="e#11757#12027#0#PHP" expanded="false" />
+            <element signature="e#12032#12592#0#PHP" expanded="false" />
+            <element signature="e#12358#12533#0#PHP" expanded="false" />
+            <element signature="e#12385#12523#0#PHP" expanded="false" />
+            <element signature="e#12598#12702#0#PHP" expanded="false" />
+            <element signature="e#12707#13053#0#PHP" expanded="false" />
+            <element signature="e#12834#12889#0#PHP" expanded="false" />
+            <element signature="e#12962#13025#0#PHP" expanded="false" />
+            <element signature="e#13059#13355#0#PHP" expanded="false" />
+            <element signature="e#13360#13965#0#PHP" expanded="false" />
+            <element signature="e#13422#13959#0#PHP" expanded="false" />
+            <element signature="e#13600#13680#0#PHP" expanded="false" />
+            <element signature="e#13785#13880#0#PHP" expanded="false" />
+            <element signature="e#13918#13959#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/slim/slim/Slim/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9152544">
+          <caret line="347" column="0" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/Token.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5333333">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/OauthStorePdo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5333333">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#56#79#0#PHP" expanded="true" />
+            <element signature="e#1877#2789#0#PHP" expanded="false" />
+            <element signature="e#2795#3217#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OidcUserAux.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/account/src/Database/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.5">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding>
+            <element signature="e#557#1140#0#PHP" expanded="false" />
+            <element signature="e#1194#1283#0#PHP" expanded="false" />
+            <element signature="e#1321#1431#0#PHP" expanded="false" />
+            <element signature="e#1458#1719#0#PHP" expanded="false" />
+            <element signature="e#1726#1940#0#PHP" expanded="false" />
+            <element signature="e#1965#1991#0#PHP" expanded="false" />
+            <element signature="e#1998#2092#0#PHP" expanded="false" />
+            <element signature="e#2116#2144#0#PHP" expanded="false" />
+            <element signature="e#2172#2199#0#PHP" expanded="false" />
+            <element signature="e#2206#2296#0#PHP" expanded="false" />
+            <element signature="e#2336#2407#0#PHP" expanded="false" />
+            <element signature="e#2444#2922#0#PHP" expanded="false" />
+            <element signature="e#2927#3199#0#PHP" expanded="false" />
+            <element signature="e#2976#3095#0#PHP" expanded="false" />
+            <element signature="e#2992#3094#0#PHP" expanded="false" />
+            <element signature="e#2972#3193#0#PHP" expanded="false" />
+            <element signature="e#3134#3193#0#PHP" expanded="false" />
+            <element signature="e#3205#3444#0#PHP" expanded="false" />
+            <element signature="e#3449#3873#0#PHP" expanded="false" />
+            <element signature="e#3492#3867#0#PHP" expanded="false" />
+            <element signature="e#3593#3809#0#PHP" expanded="false" />
+            <element signature="e#3810#3867#0#PHP" expanded="false" />
+            <element signature="e#3879#4001#0#PHP" expanded="false" />
+            <element signature="e#4006#4258#0#PHP" expanded="false" />
+            <element signature="e#4264#4544#0#PHP" expanded="false" />
+            <element signature="e#4549#5500#0#PHP" expanded="false" />
+            <element signature="e#4734#5469#0#PHP" expanded="false" />
+            <element signature="e#5339#5469#0#PHP" expanded="false" />
+            <element signature="e#5506#5901#0#PHP" expanded="false" />
+            <element signature="e#5906#6075#0#PHP" expanded="false" />
+            <element signature="e#6081#6200#0#PHP" expanded="false" />
+            <element signature="e#6205#6339#0#PHP" expanded="false" />
+            <element signature="e#6345#6461#0#PHP" expanded="false" />
+            <element signature="e#6466#6575#0#PHP" expanded="false" />
+            <element signature="e#6581#6685#0#PHP" expanded="false" />
+            <element signature="e#6690#6886#0#PHP" expanded="false" />
+            <element signature="e#6743#6838#0#PHP" expanded="false" />
+            <element signature="e#6892#6995#0#PHP" expanded="false" />
+            <element signature="e#7000#7148#0#PHP" expanded="false" />
+            <element signature="e#7154#7371#0#PHP" expanded="false" />
+            <element signature="e#7376#7616#0#PHP" expanded="false" />
+            <element signature="e#7622#7738#0#PHP" expanded="false" />
+            <element signature="e#7743#7990#0#PHP" expanded="false" />
+            <element signature="e#7996#8094#0#PHP" expanded="false" />
+            <element signature="e#8099#8338#0#PHP" expanded="false" />
+            <element signature="e#8344#8516#0#PHP" expanded="false" />
+            <element signature="e#8521#8786#0#PHP" expanded="false" />
+            <element signature="e#8792#8964#0#PHP" expanded="false" />
+            <element signature="e#8969#9372#0#PHP" expanded="false" />
+            <element signature="e#9246#9319#0#PHP" expanded="false" />
+            <element signature="e#9378#9650#0#PHP" expanded="false" />
+            <element signature="e#9655#9854#0#PHP" expanded="false" />
+            <element signature="e#9719#9773#0#PHP" expanded="false" />
+            <element signature="e#9719#9806#0#PHP" expanded="false" />
+            <element signature="e#9860#10195#0#PHP" expanded="false" />
+            <element signature="e#10200#11459#0#PHP" expanded="false" />
+            <element signature="e#10326#10446#0#PHP" expanded="false" />
+            <element signature="e#10402#10445#0#PHP" expanded="false" />
+            <element signature="e#10588#11382#0#PHP" expanded="false" />
+            <element signature="e#10633#11372#0#PHP" expanded="false" />
+            <element signature="e#10796#11372#0#PHP" expanded="false" />
+            <element signature="e#10943#11358#0#PHP" expanded="false" />
+            <element signature="e#11163#11358#0#PHP" expanded="false" />
+            <element signature="e#11465#11757#0#PHP" expanded="false" />
+            <element signature="e#11762#11967#0#PHP" expanded="false" />
+            <element signature="e#11815#11937#0#PHP" expanded="false" />
+            <element signature="e#11892#11936#0#PHP" expanded="false" />
+            <element signature="e#11973#12108#0#PHP" expanded="false" />
+            <element signature="e#12113#12375#0#PHP" expanded="false" />
+            <element signature="e#12381#12546#0#PHP" expanded="false" />
+            <element signature="e#12551#13037#0#PHP" expanded="false" />
+            <element signature="e#12729#13030#0#PHP" expanded="false" />
+            <element signature="e#13043#13179#0#PHP" expanded="false" />
+            <element signature="e#13184#13476#0#PHP" expanded="false" />
+            <element signature="e#13482#13700#0#PHP" expanded="false" />
+            <element signature="e#13705#13951#0#PHP" expanded="false" />
+            <element signature="e#13772#13944#0#PHP" expanded="false" />
+            <element signature="e#13799#13943#1#PHP" expanded="false" />
+            <element signature="e#13844#13932#0#PHP" expanded="false" />
+            <element signature="e#13957#14196#0#PHP" expanded="false" />
+            <element signature="e#14201#14424#0#PHP" expanded="false" />
+            <element signature="e#14430#14649#0#PHP" expanded="false" />
+            <element signature="e#14654#14960#0#PHP" expanded="false" />
+            <element signature="e#14802#14918#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Database/Models/OidcUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.566667">
+          <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Oauth2/UserCredential.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.466666">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#57#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sprinkles/oidc-user/src/Authenticate/OidcAuthenticator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/GrantType/UserCredentials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.779661">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Scope.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.779661">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Controller/TokenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.779661">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/vendor/bshaffer/oauth2-server-php/src/OAuth2/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37246963">
+          <caret line="320" column="0" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -60,3 +60,5 @@ public/css/min/*
 app/config-userfrosting.php
 
 app/database/userfrosting.db
+
+.idea
